@@ -1,0 +1,62 @@
+<!-- COPY OF TYPE EVERYTHING FROM HERE  DOWN -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Storybook</title>  <!-- This is can be 'Interactive Toys, or Books you have read, or animals'-->
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; box-sizing: border-box;">
+
+    <header style="text-align: center; background-color: green; padding: 20px;">
+        <h1>Interactive Storybook</h1>
+    </header>
+    <!-- The main goal of this exercise is understand the display property -->
+
+    <main style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
+        <!-- First Page -->
+        <div id="page1" class="page" style="width: 100%; max-width: 600px; text-align: center;">
+            <h2>The Beginning</h2>
+            <div style="width: 100%;">
+                <img src="IMG_6659.jpg" width="500px" alt="">
+            </div>
+           
+            <button onclick="showPage(2)" style="margin-top: 20px; padding: 10px;">Next</button>
+        </div>
+        <!-- Second Page -->
+        <div id="page2" class="page" style="width: 100%; max-width: 600px; text-align: center; display: none;">
+            <h2> Page 2</h2>
+            <div style="width: 100%;">
+                <img src="IMG_6660.jpg" width="500px" alt="">
+            </div>
+           
+
+
+            <button onclick="showPage(1)" style="margin-top: 20px; padding: 10px;">Previous</button>
+            <button onclick="showPage(3)" style="margin-top: 20px; padding: 10px;">Next</button>
+        </div>
+        <!-- YOU CAN ADD as many book pages or images are you want. Just copy the 2 line above -->
+        <!-- Third Page -->
+        <div id="page3" class="page" style="width: 100%; max-width: 600px; text-align: center; display: none;">
+            <h2>Page 3</h2>
+            <div style="width: 100%;">
+                <img src="IMG_6661.jpg" width="500px" alt="">
+            </div>
+            <button onclick="showPage(2)" style="margin-top: 20px; padding: 10px;">Previous</button>
+        </div> 
+        
+        
+
+
+        
+    </main>
+
+    <script>
+        function showPage(pageNumber) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById('page' + pageNumber).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
+           
